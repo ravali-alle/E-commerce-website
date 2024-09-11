@@ -15,7 +15,7 @@ body {
 header {
     background-color:#333;
     color: white;
-    padding: 10px 0;
+    padding: 20px ;
     text-align: right;
 }
 
@@ -96,7 +96,17 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
+.cart-icon {
+    margin-left: 5px; /* Space between the search button and cart icon */
+    font-size: 18px;
+    color: #f5f8f9;
+    text-decoration: none;
+  }
+  
+  .cart-icon i {
+    display: inline-block;
+    vertical-align: middle;
+  }
 footer p {
     margin: 0;
 }

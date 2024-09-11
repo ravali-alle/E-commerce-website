@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Home Furniture Store</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #333;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            color:white;
+        
+        }
+        
+         nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+         nav ul li {
+            margin-left: 20px;
+        }
+        
+         nav ul li a {
+            color: #fff;
+              text-decoration: none;
+            font-size: 16px;
+        }
+        
+         nav ul li a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #333;
+        }
+        
+        #order-history-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .order-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .order-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .order-item h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        
+        .order-item p {
+            color: #666;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Home Funiture Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="contact.html">ContactUs</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Order History</h2>
+        <div id="order-history-container">
+            <!-- Orders will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <script>
+
+        // Sample data (in a real scenario, this would come from a database or API)
+      // Function to display the order history
+function displayOrderHistory() {
+    const orderHistoryContainer = document.getElementById('order-history-container');
+    const cart = JSON.parse(localStorage.getItem('cart')) || []; // Retrieve cart from local storage
+
+    orderHistoryContainer.innerHTML = ''; // Clear existing content
+
+    if (cart.length === 0) {
+        orderHistoryContainer.innerHTML = '<p>Your order history is empty. Add some products to the cart!</p>';
+        return;
+    }
+
+    cart.forEach(product => {
+        const orderItem = document.createElement('div');
+        orderItem.classList.add('order-item');
+
+        orderItem.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>Your order will be in 5 days.</p>
+        `;
+
+        orderHistoryContainer.appendChild(orderItem);
+    });
+}
+
+// Load order history on page load
+window.onload = displayOrderHistory;
+
+
+    </script>
+</body>
+</html>

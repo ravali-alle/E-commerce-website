@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home furniture store</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #333;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            color:white;
+        
+        }
+        
+         nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+         nav ul li {
+            margin-left: 20px;
+        }
+        
+         nav ul li a {
+            color: #fff;
+              text-decoration: none;
+            font-size: 16px;
+        }
+        
+         nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        
+    
+        .product-container {
+            display: flex;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 1500px;
+            background-color: #f9f9f9;
+        }
+        
+        .product-image img {
+            max-width: 500px;
+            border-radius: 8px;
+        }
+        
+        .product-details {
+            margin-left: 20px;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .product-description {
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .product-price {
+            font-size: 20px;
+            color: #e74c3c;
+        }
+        .buynow {
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .buynow:hover {
+            background-color: #2ecc71;
+        }
+        
+        
+        .add-to-cart {
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #2ecc71;
+        }
+        .reviews-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1500px;
+        }
+        
+        .reviews-container h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .review {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .review-author {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .review-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .review-rating {
+            color: #ff9800;
+            font-size: 14px;
+        }
+        
+
+        footer {
+            background-color:#333;
+            padding: 20px 10%;
+            text-align: center;
+            border-top: 1px solid #dddddd;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        footer li{
+            color: white;
+        }
+        
+        footer ul li a {
+            text-decoration: none;
+            color:white;
+            font-size: 14px;
+        }
+        
+        footer ul li a:hover {
+            color: #e4a69a; /* Soft pink color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Home furniture store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html "> Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="product-container">
+        <div class="product-image">
+            <img src="images/royal bed.jpg"  alt="Bed">
+        </div>
+        <div class="product-details">
+            <h2 class="product-name">Bed</h2>
+            <p class="product-description"><h4>The royal and stylish bed. We are manufacturer modern bed king size queen size with best quality.</h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oJCK11eNTmE?si=BxnYbbQFMpnjo3nd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="product-price">MRP :79999</p>
+            <button class="buynow">Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <div class="reviews-container">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+            <p class="review-author">pooja</p>
+            <p class="review-rating">Rating: ★★★★★</p>
+        </div>
+        <div class="review">
+            <p class="review-author">akhi</p>
+            <p class="review-rating">Rating: ★★★★☆</p>
+        </div>
+        <div class="review">
+            <p class="review-author">nivedhitha</p>
+            <p class="review-rating">Rating: ★★★☆☆</p>
+        </div>
+        <footer>
+        <p>&copy; 2024 Home furniture store. All rights reserved.</p>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+        </ul>
+    </footer>
+
+</body>
+</html>
